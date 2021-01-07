@@ -78,8 +78,11 @@ public class UserService {
             throw new GlobalException(CodeMsg.MOBILE_NOT_EXIST);
         }
         //验证密码
+        //数据库中密码
         String dbPass = user.getPassword();
+        //数据库中salt值
         String saltDB = user.getSalt();
+        //
         String calcPass = MD5Util.formPassToDBPass(formPass, saltDB);
         if (!calcPass.equals(dbPass)) {
             throw new GlobalException(CodeMsg.PASSWORD_ERROR);

@@ -65,4 +65,5 @@ public class GoodsService {
 
         return ret > 0;
     }
+
 }

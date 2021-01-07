@@ -17,6 +17,8 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * Created by jiangyunxiong on 2018/5/22.
+ * HandlerMethodArgumentResolver    方法参数解析器，用于统一获取当前登录用户
+ *
  */
 @Service
 public class UserArgumentResolver implements HandlerMethodArgumentResolver {
